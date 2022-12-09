@@ -1,4 +1,6 @@
 ---
+const response = await fetch('http://127.0.0.1:8888/api/hello')
+const data = await response.json()
 ---
 
 <html lang="en">
@@ -10,6 +12,6 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1>{ data.message }</h1>	
 	</body>
 </html>
